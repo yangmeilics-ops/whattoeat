@@ -1,0 +1,92 @@
+.page {
+  padding: 24rpx 32rpx 60rpx;
+}
+
+.summary {
+  text-align: center;
+  color: #A08A6A;
+  font-size: 26rpx;
+  margin: 8rpx 0 10rpx;
+}
+
+.date {
+  font-size: 26rpx;
+  font-weight: 700;
+  color: #8A7A63;
+  margin: 30rpx 0 14rpx;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 28rpx;
+  margin-bottom: 16rpx;
+}
+
+.row .emoji {
+  font-size: 48rpx;
+  margin-right: 22rpx;
+}
+
+.mid {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.sub {
+  font-size: 23rpx;
+  color: #B4A288;
+  margin-top: 4rpx;
+}
+
+.clear-btn {
+  margin: 44rpx auto 0;
+  width: 300rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  text-align: center;
+  border-radius: 999rpx;
+  background: #FDECEA;
+  color: #D0453A;
+  font-size: 28rpx;
+}
+
+.empty {
+  padding-top: 220rpx;
+  text-align: center;
+}
+
+.empty-emoji {
+  font-size: 120rpx;
+}
+
+.empty-text {
+  margin-top: 24rpx;
+  color: #B4A288;
+  font-size: 28rpx;
+}
+
+/* 统一视觉优化 */
+.summary { text-align: left; padding: 24rpx 28rpx; background: #EEEADF; color: #625A4A; border-radius: 22rpx; }
+.date { color: #746B5B; margin-top: 36rpx; }
+.row { border-radius: 24rpx; padding: 28rpx; }
+.row .emoji { width: 80rpx; height: 80rpx; line-height: 80rpx; text-align: center; background: #F6F2E9; border-radius: 22rpx; font-size: 42rpx; }
+.name { font-size: 30rpx; overflow-wrap: break-word; }
+.sub, .empty-text { color: #797266; }
+.clear-btn { background: transparent; border: 1rpx solid #DFC9C1; border-radius: 22rpx; color: #AD533C; }
+.empty { padding-top: 100rpx; }
+
+
+/* Food 参考备选主题 */
+.summary { background: #FFFFFF; color: #806A5C; border: 2rpx solid #F5E0D8; border-radius: 24rpx; }
+.date { color: #806A5C; border-left: 5rpx solid #F87860; padding-left: 16rpx; }
+.row { padding: 30rpx; border-radius: 24rpx; }
+.name { color: #5A4B40; }
+.sub { color: #8B7569; }
+.clear-btn { color: #AD4935; border-color: #EAC5B9; border-radius: 100rpx; background: #FFFFFF; }
+

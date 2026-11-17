@@ -1,0 +1,154 @@
+.page {
+  padding: 24rpx 32rpx 60rpx;
+}
+
+.add-entry {
+  height: 92rpx;
+  line-height: 92rpx;
+  font-size: 30rpx;
+}
+
+.meal-tabs {
+  display: flex;
+  margin-top: 24rpx;
+}
+
+.meal-tab {
+  flex: 1;
+  min-width: 0;
+  margin: 0 8rpx 0 0;
+  padding: 0;
+  border-radius: 18rpx;
+  background: #FFF3ED;
+  color: #654D40;
+  font-size: 26rpx;
+  line-height: 80rpx;
+}
+
+.meal-tab:last-child { margin-right: 0; }
+.meal-tab::after { border: none; }
+.meal-tab.active {
+  background: #A43529;
+  color: #FFF;
+  font-weight: 700;
+}
+
+.group {
+  margin-top: 36rpx;
+}
+
+.group-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 18rpx;
+}
+
+.group-title .count {
+  margin-left: 12rpx;
+  font-size: 24rpx;
+  color: #B4A288;
+  font-weight: 400;
+}
+
+.dish {
+  display: flex;
+  align-items: center;
+  padding: 22rpx 26rpx;
+  margin-bottom: 16rpx;
+}
+
+.dish.dim {
+  opacity: 0.55;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-size: 30rpx;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emoji {
+  margin-right: 12rpx;
+}
+
+.ops {
+  display: flex;
+  margin-left: 16rpx;
+}
+
+.op {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background: #FFF6E9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  margin-left: 12rpx;
+  flex-shrink: 0;
+}
+
+.op.on {
+  background: #FFE8D2;
+}
+
+.op.del {
+  background: #FDECEA;
+}
+
+.foot-tip {
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #B4A288;
+}
+
+/* 统一视觉优化 */
+.add-entry { font-size: 28rpx; }
+.group { margin-top: 40rpx; }
+.group-title { color: #514B40; }
+.group-title .count { color: #817A6D; }
+.dish { padding: 22rpx 20rpx; margin-bottom: 12rpx; border-radius: 24rpx; }
+.name { font-size: 27rpx; }
+.ops { margin-left: 8rpx; }
+.op { width: 68rpx; height: 72rpx; border-radius: 18rpx; margin-left: 8rpx; background: #F4F1EA; }
+.foot-tip { color: #797266; line-height: 1.8; }
+
+
+/* 操作区独立成行，使用文字和状态共同区分 */
+.dish { flex-direction: column; align-items: stretch; }
+.dish.dim { opacity: 1; background: #F0EEE9; }
+.info { width: 100%; }
+.ops { margin: 20rpx 0 0; padding-top: 18rpx; border-top: 1rpx solid #E7E2D8; }
+.op { flex: 1; width: auto; min-width: 0; height: 80rpx; font-size: 22rpx; margin-left: 10rpx; border: 1rpx solid transparent; box-sizing: border-box; }
+.op:first-child { margin-left: 0; }
+.op.favorite { background: #FFF0CF; color: #805400; border-color: #EAD297; }
+.op.favorite.on { background: #805400; color: #FFFFFF; }
+.op.exclude { background: #E9EDF4; color: #405675; border-color: #CBD5E3; }
+.op.exclude.on { background: #405675; color: #FFFFFF; }
+.op.visibility { background: #FFFFFF; color: #665F53; border-color: #D5CFC4; }
+.op.del { background: #FCEAE7; color: #A43529; border-color: #E9BBB4; }
+
+.add-entry { margin-top: 28rpx; }
+.empty-group { padding: 28rpx; color: #797266; background: #fff; border-radius: 24rpx; font-size: 25rpx; }
+
+.name { white-space: normal; overflow-wrap: break-word; }
+
+/* Food 参考备选主题 */
+.group-title { color: #5A4B40; border-left: 5rpx solid #F87860; padding-left: 16rpx; line-height: 1.2; }
+.group-title .count { color: #8B7569; }
+.dish { border-radius: 24rpx; padding: 28rpx; margin-bottom: 20rpx; }
+.dish.dim { background: #F6EFEB; }
+.name { font-size: 30rpx; color: #5A4B40; }
+.ops { border-top-color: #F9EDE7; }
+.op { border-radius: 100rpx; }
+.empty-group { border: 2rpx solid #FBE9E2; color: #8B7569; }
+

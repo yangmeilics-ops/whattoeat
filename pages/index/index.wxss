@@ -1,0 +1,221 @@
+.page {
+  padding: 24rpx 32rpx 60rpx;
+}
+
+/* ---------- 顶部：餐次切换 + 加菜 ---------- */
+
+.top-bar {
+  display: flex;
+  align-items: center;
+}
+
+.meal-tabs {
+  flex: 1;
+  display: flex;
+  min-width: 0;
+}
+
+.meal-chip {
+  flex: 1;
+  text-align: center;
+  padding: 12rpx 0;
+  border-radius: 999rpx;
+  background: #fff;
+  color: #8A7A63;
+  font-size: 25rpx;
+  border: 2rpx solid #F3E7D3;
+  margin-right: 12rpx;
+}
+
+.meal-chip.active {
+  background: linear-gradient(135deg, #FF9A4D, #E8553D);
+  color: #fff;
+  border-color: transparent;
+  font-weight: 600;
+}
+
+.add-btn {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background: #3D2E1F;
+  color: #FFF6E9;
+  font-size: 42rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding-bottom: 4rpx;
+}
+
+/* ---------- 老虎机窗口 ---------- */
+
+.slot-card {
+  position: relative;
+  margin-top: 32rpx;
+  height: 400rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slot-body {
+  text-align: center;
+  z-index: 1;
+  padding: 0 40rpx;
+}
+
+.slot-emoji {
+  font-size: 110rpx;
+  line-height: 1.25;
+}
+
+.slot-name {
+  margin-top: 12rpx;
+  font-size: 52rpx;
+  font-weight: 700;
+  color: #3D2E1F;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.slot-name.rolling {
+  color: #B4A288;
+}
+
+.slot-mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 90rpx;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slot-mask.top {
+  top: 0;
+  background: linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0));
+}
+
+.slot-mask.bottom {
+  bottom: 0;
+  background: linear-gradient(to top, #FFFFFF, rgba(255, 255, 255, 0));
+}
+
+@keyframes land-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(232, 85, 61, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 0 46rpx rgba(232, 85, 61, 0);
+  }
+}
+
+.slot-card.landing {
+  animation: land-glow 0.7s ease-out 2;
+}
+
+/* ---------- 文案与按钮 ---------- */
+
+.quip {
+  margin-top: 28rpx;
+  text-align: center;
+  color: #A08A6A;
+  font-size: 26rpx;
+}
+
+.main-btn {
+  margin-top: 16rpx;
+  height: 108rpx;
+  line-height: 108rpx;
+  font-size: 36rpx;
+  box-shadow: 0 12rpx 30rpx rgba(232, 85, 61, 0.28);
+}
+
+.actions {
+  margin-top: 36rpx;
+  display: flex;
+}
+
+.action-btn {
+  flex: 1;
+  height: 92rpx;
+  background: #fff;
+  border-radius: 999rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  color: #6B5844;
+  box-shadow: 0 6rpx 20rpx rgba(112, 82, 44, 0.06);
+}
+
+.action-btn + .action-btn {
+  margin-left: 20rpx;
+}
+
+.action-btn.on {
+  background: #FFF1D6;
+  color: #C2622B;
+  font-weight: 600;
+}
+
+.empty-tip {
+  margin-top: 36rpx;
+  text-align: center;
+  color: #C2622B;
+  font-size: 26rpx;
+}
+
+/* 统一视觉优化 */
+.page { padding: 28rpx 32rpx 56rpx; }
+.meal-tabs { background: #EDEAE3; border-radius: 22rpx; padding: 7rpx; }
+.meal-chip { background: transparent; border: 0; margin-right: 0; border-radius: 17rpx; padding: 16rpx 0; color: #6D675D; font-size: 24rpx; }
+.meal-chip.active { background: #FFFFFF; color: #B74A29; box-shadow: 0 3rpx 12rpx rgba(50,40,20,.08); }
+.add-btn { margin-left: 16rpx; background: #302D27; width: 72rpx; height: 72rpx; flex-shrink: 0; }
+.slot-card { height: 420rpx; margin-top: 28rpx; background: #FFFDF8; border: 2rpx solid #E8E1D4; }
+.slot-body { width: 100%; min-width: 0; box-sizing: border-box; }
+.slot-emoji { font-size: 112rpx; }
+.slot-name { font-size: 46rpx; margin-top: 24rpx; color: #302D27; }
+.slot-mask { display: none; }
+.quip { color: #786E5D; margin: 28rpx 0 20rpx; }
+.main-btn { height: 104rpx; line-height: 104rpx; font-size: 32rpx; box-shadow: 0 10rpx 24rpx rgba(180,67,30,.14); }
+.actions { margin-top: 24rpx; }
+.action-btn { border-radius: 20rpx; height: 88rpx; font-size: 23rpx; box-shadow: none; border: 1rpx solid #E7E2D8; }
+.action-btn + .action-btn { margin-left: 12rpx; }
+.action-btn.on { background: #F9EBD4; color: #885B21; }
+
+
+.meal-tabs { flex-wrap: wrap; }
+.meal-chip { flex: auto; min-width: 30%; }
+.slot-name { white-space: normal; overflow-wrap: break-word; }
+
+.mode-tabs { display: flex; margin-bottom: 24rpx; border-bottom: 2rpx solid #E4DED3; }
+.mode-tab { flex: 1; text-align: center; padding: 20rpx 0; color: #797266; font-size: 32rpx; border-bottom: 5rpx solid transparent; }
+.mode-tab.selected { color: #B74A29; border-bottom-color: #D85A36; font-weight: 700; }
+.restaurant-label { flex: 1; color: #625A4A; }
+.meal-tabs { flex-wrap: nowrap; }
+.meal-chip { min-width: 0; flex: 1; }
+
+/* Food 参考备选主题 */
+.mode-tabs { border: 2rpx solid #F5E0D8; background: #FFFFFF; border-radius: 100rpx; padding: 8rpx; }
+.mode-tab { border: 0; border-radius: 100rpx; padding: 18rpx 0; color: #8B7569; font-size: 30rpx; }
+.mode-tab.selected { background: #C9503B; color: #FFFFFF; }
+.meal-tabs { background: transparent; padding: 0; }
+.meal-chip { background: #FFFFFF; color: #806A5C; border: 2rpx solid #F5E0D8; margin-right: 8rpx; border-radius: 20rpx; font-size: 24rpx; }
+.meal-chip.active { color: #AD4935; background: #FFEAE1; border-color: #F87860; box-shadow: none; }
+.add-btn { background: #C9503B; color: #FFFFFF; }
+.slot-card { background: #FFFFFF; height: 360rpx; border-color: #FBE9E2; border-radius: 28rpx; }
+.slot-name { color: #5A4B40; font-size: 44rpx; line-height: 1.5; }
+.quip { color: #8B7569; }
+.main-btn { border-radius: 100rpx; box-shadow: 0 6rpx 18rpx rgba(248,120,96,.18); }
+.action-btn { border-color: #F5E0D8; background: #FFFFFF; color: #725747; border-radius: 100rpx; }
+.action-btn.on { background: #FFEAE1; color: #AD4935; }
+.restaurant-label { color: #806A5C; }
+
+
+/* 长名称允许卡片自然增高 */
+.slot-card { height: auto; min-height: 360rpx; padding: 40rpx 0; box-sizing: border-box; }
+.slot-name { font-size: 38rpx; line-height: 1.5; margin-top: 0; word-break: break-all; }

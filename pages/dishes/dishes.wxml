@@ -1,0 +1,45 @@
+<view class="page">
+  <view class="page-heading">你的美味清单</view>
+  <view class="add-entry btn-primary" hover-class="btn-hover" bindtap="openAdd">＋ 添加菜品或饭店</view>
+
+  <view class="meal-tabs">
+    <button
+      wx:for="{{meals}}"
+      wx:key="key"
+      class="meal-tab {{activeMeal === item.key ? 'active' : ''}}"
+      data-key="{{item.key}}"
+      bindtap="switchMeal"
+    >{{item.name}}</button>
+  </view>
+
+  <view class="group" wx:if="{{group}}">
+    <view class="group-title">{{group.emoji}} {{group.name}}<text class="count">{{group.items.length}} {{activeMeal === 'restaurant' ? '家' : '道'}}</text></view>
+
+    <view class="empty-group" wx:if="{{!group.items.length}}">{{activeMeal === 'restaurant' ? '还没有饭店，点击上方按钮添加你常去的店。' : '这个分类还没有菜品，点击上方按钮添加。'}}</view>
+    <view
+      class="dish card {{item.excluded ? 'dim' : ''}}"
+      wx:for="{{group.items}}"
+      wx:for-item="item"
+      wx:key="id"
+    >
+      <view class="info">
+        <view class="name">
+          {{item.name}}<text wx:if="{{item.isCustom}}" class="tag">自定义</text><text wx:if="{{item.tag}}" class="tag">{{item.tag}}</text><text wx:if="{{item.excluded}}" class="tag danger">已暂停</text>
+        </view>
+      </view>
+      <view class="ops">
+        <view class="op favorite {{item.fav ? 'on' : ''}}" data-item="{{item}}" bindtap="onFav">{{item.fav ? '★ 已收藏' : '☆ 收藏'}}</view>
+        <view class="op exclude {{item.excluded ? 'on' : ''}}" data-item="{{item}}" bindtap="onExclude">{{item.excluded ? '恢复抽选' : '暂停抽选'}}</view>
+        <view class="op del" data-item="{{item}}" bindtap="onDelete">删除</view>
+      </view>
+    </view>
+  </view>
+
+
+  <add-dish
+    visible="{{showAdd}}"
+    default-meal="{{defaultMeal}}"
+    bind:close="onAddClose"
+    bind:added="onAdded"
+  />
+</view>

@@ -1,0 +1,25 @@
+<view class="page">
+  <view class="page-heading">每一餐，都有迹可循</view>
+  <view class="page-subheading">回顾那些被选中的美味。</view>
+  <block wx:if="{{groups.length}}">
+    <view class="summary">一共摇出过 {{total}} 次干饭灵感</view>
+
+    <view class="group" wx:for="{{groups}}" wx:key="key" wx:for-item="g">
+      <view class="date">{{g.label}}</view>
+      <view class="row card" wx:for="{{g.items}}" wx:key="_k" wx:for-item="it">
+        
+        <view class="mid">
+          <view class="name">{{it.name}}</view>
+          <view class="sub">{{it.mealName}} · {{it.time}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="clear-btn" hover-class="btn-hover" bindtap="clearAll">清空历史</view>
+  </block>
+
+  <view class="empty" wx:else>
+    <view class="empty-emoji">🍽️</view>
+    <view class="empty-text">还没有记录，去首页摇一个吧</view>
+  </view>
+</view>

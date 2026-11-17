@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "今天吃什么",
+  "usingComponents": {
+    "add-dish": "/components/add-dish/index"
+  }
+}

@@ -1,0 +1,27 @@
+<view class="mask" wx:if="{{visible}}" catchtouchmove="noop" bindtap="close">
+  <view class="panel" catchtap="noop">
+    <view class="p-title">{{meal === 'restaurant' ? '添加自定义饭店' : '添加菜品'}}</view>
+    <input
+      class="p-input"
+      value="{{name}}"
+      focus="{{visible}}"
+      maxlength="2400"
+      placeholder="{{meal === 'restaurant' ? '饭店全名（保留空格，逗号分隔）' : '菜名（空格或逗号分隔）'}}"
+      placeholder-class="p-ph"
+      bindinput="onInput"
+      bindconfirm="confirm"
+      confirm-type="done"
+    />
+    <view class="p-label">选择类别</view>
+    <view class="p-meals">
+      <view
+        wx:for="{{meals}}"
+        wx:key="key"
+        class="p-meal {{meal === item.key ? 'on' : ''}}"
+        data-key="{{item.key}}"
+        bindtap="pickMeal"
+      >{{item.name}}</view>
+    </view>
+    <view class="p-ok" hover-class="p-hover" bindtap="confirm">加进去</view>
+  </view>
+</view>

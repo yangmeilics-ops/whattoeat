@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "菜库",
+  "usingComponents": {
+    "add-dish": "/components/add-dish/index"
+  }
+}

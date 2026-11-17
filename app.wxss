@@ -1,0 +1,61 @@
+page {
+  background: #FFF6E9;
+  color: #3D2E1F;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.card {
+  background: #fff;
+  border-radius: 28rpx;
+  box-shadow: 0 8rpx 30rpx rgba(112, 82, 44, 0.08);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #FF9A4D, #E8553D);
+  color: #fff;
+  border-radius: 999rpx;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-hover {
+  transform: scale(0.96);
+  opacity: 0.9;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2rpx 14rpx;
+  border-radius: 999rpx;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  background: #FFF1E0;
+  color: #C2622B;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+
+.tag.danger {
+  background: #FDECEA;
+  color: #D0453A;
+}
+
+/* 统一视觉优化 */
+page { background: #F8F6F1; color: #302D27; }
+.card { border-radius: 32rpx; box-shadow: 0 8rpx 28rpx rgba(52,46,33,.035); border: 1rpx solid #EDE9E0; }
+.btn-primary { background: #D85A36; border-radius: 24rpx; }
+.page-heading { font-size: 44rpx; font-weight: 700; line-height: 1.35; letter-spacing: -1rpx; margin-top: 20rpx; }
+.page-subheading { font-size: 25rpx; color: #787269; margin: 14rpx 0 36rpx; line-height: 1.6; }
+.tag { background: #F5EEE1; color: #8A5D30; }
+
+
+/* Food 参考备选主题 */
+page { font-family: "PingFang SC", sans-serif; background: #FFF9F6; color: #5A4B40; }
+.card { background: #FFFFFF; border: 2rpx solid #FBE9E2; border-radius: 24rpx; box-shadow: 0 4rpx 16rpx rgba(90,75,64,.035); }
+.page-heading { font-size: 36rpx; color: #5A4B40; padding-left: 20rpx; position: relative; letter-spacing: 0; }
+.page-heading::before { content: ""; position: absolute; left: 0; top: 9rpx; width: 6rpx; height: 32rpx; border-radius: 4rpx; background: #F87860; }
+.page-subheading { color: #8B7569; }
+.btn-primary { background: #C9503B; border-radius: 100rpx; box-shadow: 0 6rpx 16rpx rgba(248,120,96,.18); }
+.tag { background: #FFF0E9; color: #98614C; }
+

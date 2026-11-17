@@ -1,0 +1,122 @@
+@keyframes pop-in {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(40, 28, 12, 0.45);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  width: 600rpx;
+  background: #FFFDF7;
+  border-radius: 32rpx;
+  padding: 44rpx 40rpx 40rpx;
+  box-sizing: border-box;
+  animation: pop-in 0.18s ease-out;
+}
+
+.p-title {
+  font-size: 36rpx;
+  font-weight: 700;
+  text-align: center;
+  color: #3D2E1F;
+}
+
+.p-input {
+  margin-top: 32rpx;
+  height: 88rpx;
+  padding: 0 24rpx;
+  background: #fff;
+  border: 2rpx solid #F0E3CC;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  color: #3D2E1F;
+  box-sizing: border-box;
+}
+
+.p-ph {
+  color: #C4B49B;
+}
+
+.p-label {
+  margin-top: 28rpx;
+  font-size: 26rpx;
+  color: #8A7A63;
+}
+
+.p-meals {
+  margin-top: 16rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-meal {
+  padding: 10rpx 26rpx;
+  border-radius: 999rpx;
+  background: #fff;
+  border: 2rpx solid #F0E3CC;
+  color: #8A7A63;
+  font-size: 25rpx;
+  margin: 0 14rpx 14rpx 0;
+}
+
+.p-meal.on {
+  background: #FFE8D2;
+  border-color: #FF9A4D;
+  color: #C2622B;
+  font-weight: 600;
+}
+
+.p-ok {
+  margin-top: 26rpx;
+  height: 92rpx;
+  line-height: 92rpx;
+  text-align: center;
+  border-radius: 999rpx;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+  background: linear-gradient(135deg, #FF9A4D, #E8553D);
+}
+
+.p-hover {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+/* 统一视觉优化 */
+.panel { width: 660rpx; max-width: 92%; border-radius: 36rpx; background: #FFFDFA; }
+.p-title { text-align: left; color: #302D27; }
+.p-input { border-color: #DBD5C9; height: 96rpx; font-size: 26rpx; }
+.p-ph { color: #8E877C; }
+.p-meal { border-radius: 18rpx; padding: 14rpx 24rpx; }
+.p-meal.on { background: #F9E8DD; border-color: #D85A36; color: #AA4225; }
+.p-ok { background: #D85A36; border-radius: 22rpx; }
+
+
+/* Food 参考备选主题 */
+.mask { background: rgba(70,49,39,.38); }
+.panel { background: #FFF9F6; border-radius: 28rpx; }
+.p-title { color: #5A4B40; border-left: 5rpx solid #F87860; padding-left: 16rpx; }
+.p-input { border-color: #EAC5B9; background: #FFFFFF; border-radius: 16rpx; color: #5A4B40; }
+.p-ph { color: #8B7569; }
+.p-meal { border-color: #F5E0D8; color: #806A5C; border-radius: 100rpx; }
+.p-meal.on { background: #FFEAE1; color: #AD4935; border-color: #F87860; }
+.p-ok { background: #C9503B; border-radius: 100rpx; }
+

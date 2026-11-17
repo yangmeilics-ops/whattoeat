@@ -1,0 +1,51 @@
+<view class="page">
+  <view class="page-heading">把纠结，留给下一餐</view>
+  <view class="page-subheading">选菜品或饭店，让随机灵感帮你做决定。</view>
+  <view class="mode-tabs">
+    <view class="mode-tab {{mode === 'dishes' ? 'selected' : ''}}" data-mode="dishes" bindtap="switchMode">吃什么</view>
+    <view class="mode-tab {{mode === 'restaurant' ? 'selected' : ''}}" data-mode="restaurant" bindtap="switchMode">去哪吃</view>
+  </view>
+  <view class="top-bar">
+    <view class="meal-tabs" wx:if="{{mode === 'dishes'}}">
+      <view
+        wx:for="{{meals}}"
+        wx:key="key"
+        class="meal-chip {{activeMeal === item.key ? 'active' : ''}}"
+        data-key="{{item.key}}"
+        bindtap="switchMeal"
+      >{{item.emoji}} {{item.name}}</view>
+    </view>
+    <view class="restaurant-label" wx:if="{{mode === 'restaurant'}}">我的自定义饭店</view>
+    <view class="add-btn" hover-class="btn-hover" bindtap="openAdd">＋</view>
+  </view>
+
+  <view class="slot-card card {{landing ? 'landing' : ''}}">
+    <view class="slot-mask top"></view>
+    <view class="slot-body">
+      
+      <view class="slot-name {{spinning ? 'rolling' : ''}}">{{display.name}}</view>
+    </view>
+    <view class="slot-mask bottom"></view>
+  </view>
+
+  <view class="quip">{{quipText}}</view>
+
+  <view class="btn-primary main-btn" hover-class="btn-hover" bindtap="spin">
+    {{spinning ? '命运滚滚中…' : '开始摇'}}
+  </view>
+
+  <view class="actions" wx:if="{{result && !spinning}}">
+    <view class="action-btn {{result.fav ? 'on' : ''}}" hover-class="btn-hover" bindtap="favDish">{{result.fav ? '⭐ 已收藏' : '☆ 收藏'}}</view>
+    <view class="action-btn" hover-class="btn-hover" bindtap="skipDish">暂停并重选</view>
+    <view class="action-btn" hover-class="btn-hover" bindtap="copyDish">复制名称</view>
+  </view>
+
+  <view class="empty-tip" wx:if="{{poolEmpty}}">{{activeMeal === 'restaurant' ? '还没有可选饭店，点击右上角＋添加，或到管理菜库恢复。' : '暂无可选菜品，请添加或恢复几个。'}}</view>
+
+  <add-dish
+    visible="{{showAdd}}"
+    default-meal="{{activeMeal}}"
+    bind:close="onAddClose"
+    bind:added="onAdded"
+  />
+</view>
